@@ -2,6 +2,9 @@
     margin: 0;
     border: border-box;
 }
+.hidden{
+    display: none;
+}
 a:hover{
     border: 2px solid #7b68ee;
     padding: 4px;
@@ -21,7 +24,7 @@ button{
     border-radius: 50px;
 }
 button:hover{
-    border: 2px solid #7b68ee;
+    border: 1px solid #7b68ee;
 }
 a{
     text-decoration: none !important;
@@ -157,8 +160,11 @@ input,textarea{
 .card{
     width: 336px;
     margin: 30px;
-    padding: 35px 30px;
+    padding: 25px 20px !important;
     box-shadow: 0 4px 8px #2dbcdc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 /* feedback */
 .feedback{
