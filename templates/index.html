@@ -16,16 +16,16 @@
             <img src="{% static "images/logo.png" %}" alt="TECHY SOFTWARE" style="height: 80px;">
          </div>
         <div class="links">
-            <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Portfolio</a>
-                        <a href="">Testimonial</a>
-                        <a href="">Team</a>
-                        <a href="">Blog</a>
-                        <a href="">Feedback</a>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#testimonial">Testimonial</a>
+            <a href="#team">Team</a>
+            <a href="#blog">Blog</a>
+            <a href="#feedback">Feedback</a>
         </div>
         <div>
-            <button>Support</button>
+            <button >Support</button>
         </div>
     </div>
     <div class="header_small">
@@ -37,13 +37,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                     <ul class="navbar-nav">
-                        <a href="">Home</a>
-                        <a href="">About</a>
-                        <a href="">Portfolio</a>
-                        <a href="">Testimonial</a>
-                        <a href="">Team</a>
-                        <a href="">Blog</a>
-                        <a href="">Feedback</a>
+                        <a href="#hero">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#portfolio">Portfolio</a>
+                        <a href="#testimonial">Testimonial</a>
+                        <a href="#team">Team</a>
+                        <a href="#blog">Blog</a>
+                        <a href="#feedback">Feedback</a>
                     </ul>
                 </div>
             </div>
@@ -89,17 +89,17 @@
         <h6>RECENT WORKS</h6>
         <h2>Our Portfolio</h2>
         <div class="buttons">
-            <button class="">All</button>
-            <button class="off">Branding</button>
-            <button class="off">Application</button>
-            <button class="off">Web Design</button>
-            <button class="off">Photography</button>
+            <button id="All" class="toggler_btn" onclick="filterPortfolio(this)">All</button>
+            <button id="Branding" class="off toggler_btn" onclick="filterPortfolio(this)">Branding</button>
+            <button id="Application" class="off toggler_btn" onclick="filterPortfolio(this)">Application</button>
+            <button id="Web_Design" class="off toggler_btn" onclick="filterPortfolio(this)">Web Design</button>
+            <button id="Photography" class="off toggler_btn" onclick="filterPortfolio(this)">Photography</button>
         </div>
         <div class="portfolio_container">
             {% for portfolio in portfolios %}
-            <div class="card">
-                <img src="{{ portfolio.image.url }}" alt="{{portfolio.heading}}" class="portfolio_img"><br>
-                <p class="toggler" style="display:none;">{{portfolio.type}}</p>
+            <div class="card1" data-type="{{ portfolio.type }}">
+                <img src="{{ portfolio.image.url }}" alt="{{ portfolio.heading }}" class="portfolio_img" style="width:98%;top: 50%;left: 50%;"><br>
+                <p class="toggler" style="display:none;">{{ portfolio.type }}</p>
             </div>
             {% endfor %}
         </div>
@@ -145,7 +145,7 @@
                 <span><i class="fa-solid fa-calendar-days" style="color: #7b68ee;margin-left:10px;margin-right:5px;"></i>{{blog.date}}</span></p>
                 <h3>{{blog.heading}}</h3><br>
                 <p>{{blog.content}}</p>
-                <i class="fa-solid fa-arrow-right" style="color: #7b6bee;">Read More</i>
+                <a href=""><i class="fa-solid fa-arrow-right" style="color: #7b6bee;">Read More</i></a>
             </div>
             {% endfor %}
         </div>

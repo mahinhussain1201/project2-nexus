@@ -157,7 +157,7 @@ input,textarea{
     justify-content: center;
     flex-wrap: wrap;
 }
-.card{
+.card,.card1{
     width: 336px;
     margin: 30px;
     padding: 25px 20px !important;
@@ -330,7 +330,7 @@ button,input,textarea{
         flex-direction: column;
     }
     /* about */
-    .card{
+    .card,.card1{
         width: 300px;
     }
     /* footer */

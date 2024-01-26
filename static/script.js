@@ -1,21 +1,16 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const buttons = document.querySelectorAll('.buttons button');
-    const cards = document.querySelectorAll('.portfolio_container .card');
+function filterPortfolio(button) {
+    var typeToFilter = button.innerHTML;
+    var portfolioItems = document.querySelectorAll('.card1');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            // Remove 'active' class from all buttons
-            buttons.forEach(b => b.classList.remove('active'));
-
-            // Add 'active' class to the clicked button
-            this.classList.add('active');
-
-            // Show/hide cards based on the selected category
-            const category = this.id;
-            cards.forEach(card => {
-                const cardCategory = card.dataset.category;
-                card.style.display = (category === 'all' || category === cardCategory) ? 'block' : 'none';
-            });
-        });
+    portfolioItems.forEach(function (item) {
+        var itemType = item.getAttribute('data-type');
+        var display = (typeToFilter === 'All' || typeToFilter === itemType) ? 'block' : 'none';
+        item.style.display = display;
     });
-});
+
+    // Toggle 'off' class for all buttons
+    document.querySelectorAll('.toggler_btn').forEach(function (btn) {
+        btn.classList.toggle('off', btn !== button);
+    });
+}
+
