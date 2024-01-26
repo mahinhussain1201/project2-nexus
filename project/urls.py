@@ -24,5 +24,6 @@ admin.autodiscover()
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='index'),
+    path('techy_software/', include('techy_software.urls', namespace='techy_software')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

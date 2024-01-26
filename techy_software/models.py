@@ -43,4 +43,18 @@ class Team(models.Model):
     
     def __str__(self):
         return self.name
+  
+class SaveFeedback(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.EmailField()
+    message=models.TextField()
+    
+    def __str__(self):
+        return self.name
+    
+class Subscribe(models.Model):
+    email=models.EmailField()
+    
+    def __str__(self):
+        return self.email
     

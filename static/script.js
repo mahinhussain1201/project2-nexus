@@ -14,3 +14,12 @@ function filterPortfolio(button) {
     });
 }
 
+function hideAlert() {
+    var alertElement = document.getElementById('myAlert');
+    if (alertElement) {
+        alertElement.classList.add('hidden'); // Add a class to hide the alert
+    }
+}
+
+// Set a timeout to call hideAlert after 2000 milliseconds (2 seconds)
+setTimeout(hideAlert, 2000);
