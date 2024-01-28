@@ -1,13 +1,16 @@
 {
-    "builds": [{
-        "src": "techy_software/wsgi.py",
+    "builds": [
+      {
+        "src": "techy_software/manage.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+      }
+    ],
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "techy_software/wsgi.py"
-        }
+      {
+        "src": "/(.*)",
+        "dest": "techy_software/manage.py"
+      }
     ]
-}
+  }
+  
