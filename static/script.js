@@ -7,19 +7,12 @@ function filterPortfolio(button) {
         var display = (typeToFilter === 'All' || typeToFilter === itemType) ? 'block' : 'none';
         item.style.display = display;
     });
-
-    // Toggle 'off' class for all buttons
     document.querySelectorAll('.toggler_btn').forEach(function (btn) {
         btn.classList.toggle('off', btn !== button);
     });
 }
 
-function hideAlert() {
-    var alertElement = document.getElementById('myAlert');
-    if (alertElement) {
-        alertElement.classList.add('hidden'); // Add a class to hide the alert
-    }
-}
-
-// Set a timeout to call hideAlert after 2000 milliseconds (2 seconds)
-setTimeout(hideAlert, 2000);
+setTimeout(function() {
+    var element = document.getElementById('myAlert');
+    element.classList.add('hidden');
+}, 2000);

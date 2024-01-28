@@ -34,4 +34,7 @@ def subscribe(request):
         subscribe=Subscribe(email=email)
         subscribe.save()
         messages.success(request,"Subscribed Successfully")
-    return render(request, 'index.html', context)   
+    return render(request, 'index.html', context) 
+
+def no_info(request):
+      return render(request, 'no_info.html')

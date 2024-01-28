@@ -31,7 +31,7 @@
             <a href="#feedback">Feedback</a>
         </div>
         <div>
-            <button >Support</button>
+            <a id="no" href="#feedback"><button >Support</button></a>
         </div>
     </div>
     
@@ -60,15 +60,15 @@
     <div class="hero_setion">
         <div class="details">
             <div class="social_media">
-                <a><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-                <a><i class="fa-brands fa-facebook fa-2xl"></i></a>
-                <a><i class="fa-brands fa-instagram fa-2xl"></i></a>
-                <a><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a>
             </div>
             <h1>IT Solutions & Business Services Company</h1> 
             <p>Techy Software crafts innovative solutions, blending expertise with cutting-edge technology. Elevate your digital experience with our tailored software solutions and services.</p>
-            <button>Our Services</button>
-            <button>Contact Us</button>
+            <a id="no" href="#about"><button>Our Services</button></a>
+            <a id="no" href="#feedback"><button>Contact Us</button></a>
         </div>
         <div>
             <img src="{% static "images/hero.png" %}" alt="techy" class="hero_img">
@@ -86,7 +86,7 @@
             <img src="{{ service.icon.url }}" alt="{{ service.heading }}" style="width:100px"><br>
             <h3>{{service.heading}}</h3><br>
             <p>{{service.content}}</p>
-            <a href=""><i class="fa-solid fa-arrow-right" style="color: #7b6bee;">Read More</i></a>
+            <a href="{% url 'techy_software:no_info' %}"><i class="fa-solid fa-arrow-right" style="color: #7b6bee;">Read More</i></a>
         </div>
         {% endfor %}
     </div>
@@ -152,7 +152,7 @@
                 <span><i class="fa-solid fa-calendar-days" style="color: #7b68ee;margin-left:10px;margin-right:5px;"></i>{{blog.date}}</span></p>
                 <h3>{{blog.heading}}</h3><br>
                 <p>{{blog.content}}</p>
-                <a href=""><i class="fa-solid fa-arrow-right" style="color: #7b6bee;">Read More</i></a>
+                <a href="{% url 'techy_software:no_info' %}"><i class="fa-solid fa-arrow-right" style="color: #7b6bee;">Read More</i></a>
             </div>
             {% endfor %}
         </div>
@@ -206,33 +206,33 @@
                 <h2><img src="{% static "images/logo.png" %}" alt="TECHY SOFTWARE" style="height: 50px; ">Techy Software</h2>
                 <p>Techy Software crafts innovative solutions, blending expertise with cutting-edge technology. Elevate your digital experience with our tailored software solutions and services.</p>
                 <div class="social_media">
-                    <a><i class="fa-brands fa-linkedin fa-2xl"></i></a>
-                    <a><i class="fa-brands fa-facebook fa-2xl"></i></a>
-                    <a><i class="fa-brands fa-instagram fa-2xl"></i></a>
-                    <a><i class="fa-brands fa-twitter fa-2xl"></i></a>
+                    <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin fa-2xl"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                    <a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a>
                 </div>
             </div>
             <div class="our_services">
                 <h3>Our Services</h3>
-                <a href="">Startup Solutions</a><br>
-                <a>Web Devlopment</a><br>
-                <a>Apps Devlopment</a><br>
-                <a>Networking Services</a><br>
-                <a>SEO Optimisation</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Startup Solutions</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Web Devlopment</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Apps Devlopment</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Networking Services</a><br>
+                <a href="{% url 'techy_software:no_info' %}">SEO Optimisation</a><br>
             </div>
             <div class="useful_links">
                 <h3>Useful Links</h3>
-                <a>About Us</a><br>
-                <a>Case Study</a><br>
-                <a>Contact Info</a><br>
-                <a>Privacy Policy</a><br>
-                <a>Terms & Conditions</a><br>
+                <a href="{% url 'techy_software:no_info' %}">About Us</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Case Study</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Contact Info</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Privacy Policy</a><br>
+                <a href="{% url 'techy_software:no_info' %}">Terms & Conditions</a><br>
             </div>
         </div>
         <hr>
         <div class="copyrights">
             <div>© 2024 Techy Software - All Rights Reserved.</div>
-            <div><a>Terms & Conditions </a>| <a>Privacy Policy</a>
+            <div class="footer_dets"><a href="{% url 'techy_software:no_info' %}">Terms & Conditions </a>| <a href="{% url 'techy_software:no_info' %}">Privacy Policy</a>
             </div>
         </div>
     </footer>

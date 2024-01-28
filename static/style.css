@@ -2,6 +2,10 @@
     margin: 0;
     border: border-box;
 }
+#no:hover{
+    border: none !important;
+}
+
 .hidden{
     display: none;
 }
@@ -125,6 +129,12 @@ input,textarea{
     padding: 10px;
     margin: 10px;
 }
+.details a,.footer_dets a{
+    color: white;
+}
+.details a:hover{
+    border-color: white;
+}
 .details h1{
     font-size: 5rem;
     margin-top: 1em;
@@ -193,6 +203,8 @@ input,textarea{
 }
 textarea{
     margin: 5px !important;
+    vertical-align: middle;
+    height: 50px;
 }
 .form_part{
     display: flex;
